@@ -190,6 +190,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Club.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InfoContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Tournament.cs" />
