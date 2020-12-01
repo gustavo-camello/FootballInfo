@@ -112,3 +112,5 @@ C:\Users\gucam\Desktop\AIT project\FootbalInfo\FootballInfo\obj\Debug\FootballIn
 C:\Users\gucam\Desktop\AIT project\FootbalInfo\FootballInfo\obj\Debug\FootballInfo.csproj.CopyComplete
 C:\Users\gucam\Desktop\AIT project\FootbalInfo\FootballInfo\obj\Debug\FootballInfo.dll
 C:\Users\gucam\Desktop\AIT project\FootbalInfo\FootballInfo\obj\Debug\FootballInfo.pdb
+C:\Users\gucam\Desktop\AIT project\FootbalInfo\FootballInfo\obj\Debug\FootballInfo.Migrations.InitialCreate.resources
+C:\Users\gucam\Desktop\AIT project\FootbalInfo\FootballInfo\obj\Debug\FootballInfo.csproj.GenerateResource.cache

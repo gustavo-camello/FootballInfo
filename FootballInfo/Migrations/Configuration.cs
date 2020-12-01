@@ -1,6 +1,8 @@
 namespace FootballInfo.Migrations
 {
+    using FootballInfo.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -27,6 +29,33 @@ namespace FootballInfo.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            var clubs = new List<Club>
+            {
+                new Club(){ClubId = 10, Name = "Club 1", Address = "Address 1"},
+                new Club(){ClubId = 11, Name = "Club 2", Address = "Address 2"},
+                new Club(){ClubId = 12, Name = "Club 3", Address = "Address 3"},
+                new Club(){ClubId = 13, Name = "Club 4", Address = "Address 4"},
+            };
+
+            clubs.ForEach(c => context.Clubs.AddOrUpdate(c));
+
+            context.SaveChanges();
+
+            var players = new List<Player>
+            {
+                new Player()
+                {
+                    PlayerId = 1,
+                    Name = "Gustavo Camello",
+                    Age = 25,
+                    Clubs = context.Clubs.Where(c => c.Name.Contains("Club")).ToList()
+                }
+            };
+
+            players.ForEach(p => context.Players.AddOrUpdate(p));
+
+            context.SaveChanges();
         }
     }
 }
