@@ -22,14 +22,14 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td onmouseover="onIdMouseOver()">
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClubId }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClubId }, new { @class = "btn btn-success" }) |
             @Html.ActionLink("Details", "Details", new { id=item.ClubId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ClubId })
         </td>
@@ -37,3 +37,13 @@
 }
 
 </table>
+
+@section Scripts{
+    <script type="text/javascript">
+        function onIdMouseOver() {
+            fetch('https://localhost:44336/api/ClubsAPI')
+                .then(response => response.json())
+                .then(data => console.log(data));
+        }
+    </script>
+} 
